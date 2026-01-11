@@ -1,0 +1,26 @@
+
+class Student:
+   
+    def __init__(self, name, roll_no, marks):
+        self.name = name
+        self.roll_no = roll_no
+        self.marks = marks
+
+    
+    def display_details(self):
+        print("Name:", self.name)
+        print("Roll No:", self.roll_no)
+        print("Marks:", self.marks)
+
+    
+    def is_pass(self):
+        if self.marks >= 40:
+            print("Result: Pass")
+        else:
+            print("Result: Fail")
+
+
+student1 = Student("Rayyan", 12, 95)
+
+student1.display_details()
+student1.is_pass()
