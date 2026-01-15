@@ -1,0 +1,142 @@
+#Practice Question 1: Student Grades
+
+class Student:
+    def __init__(self):
+        self.__grade = None
+
+    def set_grade(self, value):
+        if value >= 0 and value <= 100:
+            self.__grade = value
+        else:
+            print("Invalid grade")
+
+    def result(self):
+        if self.__grade >= 50:
+            return "Passed"
+        else:
+            return "Failed"
+
+
+s = Student()
+s.set_grade(120)
+s.set_grade(85)
+print("Grade:", s._Student__grade)
+print("Status:", s.result())
+
+
+#Practice Question 2: Product Price 
+
+class Product:
+    def __init__(self):
+        self.__price = 0
+
+    def set_price(self, amount):
+        if amount > 0:
+            self.__price = amount
+            print("Price after setting:", self.__price)
+        else:
+            print("Invalid price")
+
+    def apply_discount(self, percent):
+        self.__price = self.__price - (self.__price * percent / 100)
+        print("Price after discount:", self.__price)
+
+
+p = Product()
+p.set_price(-50)
+p.set_price(1000)
+p.apply_discount(20)
+
+
+#Practice Question 3: Employee Salary 
+
+
+
+class Employee:
+    def __init__(self):
+        self.__salary = 8
+
+    def set_salary(self, amount):
+        if amount >= 0:
+            self.__salary = amount
+            print("Salary after setting:", self.__salary)
+        else:
+            print("Invalid salary")
+
+    def increase_salary(self, percent):
+        self.__salary = self.__salary + (self.__salary * percent / 100)
+        print("Salary after increment:", self.__salary)
+
+
+e = Employee()
+e.set_salary(-1000)
+e.set_salary(5000)
+e.increase_salary(10)
+
+
+
+
+
+#Practice Question 4: Car Speed 
+
+
+
+class Car:
+    def __init__(self):
+        self.__speed = 8
+
+    def set_speed(self, value):
+        if value >= 0:
+            self.__speed = value
+            print("Speed after setting:", self.__speed)
+        else:
+            print("Invalid speed.")
+
+    def accelerate(self, amount):
+        self.__speed = self.__speed + amount
+        print("Speed after acceleration:", self.__speed)
+
+    def brake(self, amount):
+        self.__speed = self.__speed - amount
+        if self.__speed < 0:
+            self.__speed = 0
+        print("Speed after braking:", self.__speed)
+
+
+c = Car()
+c.set_speed(-29)
+c.set_speed(50)
+c.accelerate(30)
+c.brake(60)
+print("Final speed:", c._Car__speed)
+
+
+
+#Practice Question 5: Bank Account 
+
+class BankAccount:
+    def __init__(self):
+        self.__balance = 8
+
+    def set_balance(self, amount):
+        if amount >= 0:
+            self.__balance = amount
+        else:
+            print("Invalid balance amount")
+
+    def deposit(self, amount):
+        self.__balance = self.__balance + amount
+        print("Balance after deposit:", self.__balance)
+
+    def withdraw(self, amount):
+        self.__balance = self.__balance - amount
+        print("Balance after withdrawal:", self.__balance)
+
+
+b = BankAccount()
+b.set_balance(-100)
+b.deposit(500)
+b.withdraw(300)
+print("Final balance:", b._BankAccount__balance)
+
+
